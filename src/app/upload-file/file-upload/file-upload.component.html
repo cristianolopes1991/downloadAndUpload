@@ -3,7 +3,11 @@
     <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)"/>
     <label class="custom-file-label" for="customFile" id="customFileLabel">Choose file</label>
   </div>
-  <div style="margin-top: 10px;">
+  <div class="progress" style="margin-top: 20px;">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%;" [style.width]="progress + '%'">
+      {{ progress }} %</div>
+  </div>
+  <div style="margin-top: 50px;">
     <button type="button" class="btn btn-primary" (click)="onUpload()">Upload</button>
   </div>
 </div>
