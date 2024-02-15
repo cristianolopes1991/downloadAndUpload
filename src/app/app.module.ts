@@ -6,11 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FileUploadComponent } from './upload-file/file-upload/file-upload.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { PrimeiroComponenteComponent } from './subjects/primeiro-componente/primeiro-componente.component';
+import { SegundoComponenteComponent } from './subjects/segundo-componente/segundo-componente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    PrimeiroComponenteComponent,
+    SegundoComponenteComponent
   ],
   imports: [
     BrowserModule,

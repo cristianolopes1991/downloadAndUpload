@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from '@angular/router';
 import { UploadService } from '../upload.service';
 import { HttpEvent, HttpEventType } from '@angular/common/http';
+import { DocumentoServiceService } from 'src/app/subjects/documento-service.service';
 
 @Component({
   selector: 'app-file-upload',
@@ -12,8 +13,12 @@ export class FileUploadComponent implements OnInit {
   
   files: Set<File> = new Set();
   progress = 0;
+  dadosDocumentosIds: {idDocumento: number}[] = [];
 
-  constructor(private service: UploadService) {}
+  constructor(
+    private service: UploadService,
+    private documentoService: DocumentoServiceService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -50,4 +55,7 @@ export class FileUploadComponent implements OnInit {
         });
     }
   }
+
+
+  
 }
